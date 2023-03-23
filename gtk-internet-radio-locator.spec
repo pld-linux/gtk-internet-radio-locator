@@ -1,14 +1,14 @@
 Summary:	GTK Internet Radio Locator (GTK 4 version)
 Summary(pl.UTF-8):	GTK Internet Radio Locator (wersja dla GTK 4) - program do wyszukiwania rozgłośni internetowych
 Name:		gtk-internet-radio-locator
-Version:	0.0.3
+Version:	4.8.3
 Release:	1
 License:	GPL v3+ (parts LGPL v2.1+ or GPL v2+)
 Group:		X11/Applications/Sound
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gtk-internet-radio-locator/0.0/%{name}-%{version}.tar.xz
-# Source0-md5:	1e35e29400675b867b172f5b67aa575c
+Source0:	https://download.gnome.org/sources/gtk-internet-radio-locator/4.8/%{name}-%{version}.tar.xz
+# Source0-md5:	04dc0f4ff9894009ac54fd0eb35386ff
 URL:		https://wiki.gnome.org/Apps/Girl
-BuildRequires:	autoconf >= 2.59
+BuildRequires:	autoconf >= 2.71
 BuildRequires:	automake >= 1:1.11
 BuildRequires:	geocode-glib-devel >= 3.20
 BuildRequires:	gettext-tools
@@ -17,7 +17,7 @@ BuildRequires:	gstreamer-devel >= 1.0
 # pkgconfig(gstreamer-player-1.0)
 BuildRequires:	gstreamer-plugins-bad-devel >= 1.0
 BuildRequires:	gstreamer-plugins-base-devel >= 1.0
-BuildRequires:	gtk4-devel >= 3.92.1
+BuildRequires:	gtk4-devel >= 4.9.2
 BuildRequires:	gtk-doc >= 1.16
 BuildRequires:	intltool >= 0.50.1
 BuildRequires:	libchamplain-devel >= 0.12.10
@@ -25,13 +25,12 @@ BuildRequires:	libtool >= 2:2.2.6
 BuildRequires:	libxml2-devel >= 2.0
 BuildRequires:	pango-devel >= 1:0.28
 BuildRequires:	pkgconfig
-BuildRequires:	sed >= 4.0
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 BuildRequires:	yelp-tools
 Requires:	geocode-glib >= 3.20
 Requires:	glib2 >= 1:2.38.0
-Requires:	gtk4 >= 3.92.1
+Requires:	gtk4 >= 4.9.2
 Requires:	libchamplain >= 0.12.10
 # only functionally, both packages can be installed simultaneously
 #Obsoletes:	girl
@@ -49,8 +48,6 @@ wyszukać programy internetowych rozgłości radiowych nadających na
 
 %prep
 %setup -q
-
-%{__sed} -i -e 's/gtk+-4.0/gtk4/' configure.ac
 
 %build
 %{__libtoolize}
