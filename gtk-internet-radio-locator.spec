@@ -2,7 +2,7 @@ Summary:	GTK Internet Radio Locator (GTK 4 version)
 Summary(pl.UTF-8):	GTK Internet Radio Locator (wersja dla GTK 4) - program do wyszukiwania rozgłośni internetowych
 Name:		gtk-internet-radio-locator
 Version:	4.8.3
-Release:	1
+Release:	2
 License:	GPL v3+ (parts LGPL v2.1+ or GPL v2+)
 Group:		X11/Applications/Sound
 Source0:	https://download.gnome.org/sources/gtk-internet-radio-locator/4.8/%{name}-%{version}.tar.xz
